@@ -1,6 +1,9 @@
-package dev.datanorte.CadastroDeNinjas;
+package dev.datanorte.CadastroDeNinjas.Ninjas;
 
+import dev.datanorte.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_cadastro")
@@ -11,14 +14,18 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+    @ManyToMany
+    @JoinColumn(name = "missoes_id")
+    private MissoesModel missoes;
 
     public NinjaModel() {
     }
 
-    public NinjaModel(String nome, String email, int idade) {
+    public NinjaModel(String nome, String email, int idade, MissoesModel missoes) {
         this.nome = nome;
         this.email = email;
         this.idade = idade;
+        this.missoes = missoes;
     }
 
     public String getNome() {
@@ -43,5 +50,13 @@ public class NinjaModel {
 
     public void setIdade(int idade) {
         this.idade = idade;
+    }
+
+    public MissoesModel getMissao() {
+        return missoes;
+    }
+
+    public void setMissao(MissoesModel missoes) {
+        this.missoes = missoes;
     }
 }
