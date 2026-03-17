@@ -31,7 +31,7 @@ exercitar:
 ------------------------------------------------------------------------
 
 ## 📂 Estrutura do Projeto
-
+``` bash
 cadastrodeninjas
 │
 ├── CadastroDeNinjasApplication.java
@@ -84,7 +84,7 @@ cadastrodeninjas
 │
 └── util
     └── ApiResponse.java
-
+```
 ------------------------------------------------------------------------
 
 ## 🚀 Como clonar o projeto
