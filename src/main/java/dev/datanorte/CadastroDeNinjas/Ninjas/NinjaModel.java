@@ -6,8 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Entity
 @Table(name = "tb_cadastro")
 @NoArgsConstructor
@@ -26,8 +24,11 @@ public class NinjaModel {
     private String imgUrl;
     @Column(name = "idade")
     private int idade;
+    @Column(name = "rank")
+    private String rank;
     @ManyToOne
     @JoinColumn(name = "missoes_id")
     private MissoesModel missoes;
+
 
 }
