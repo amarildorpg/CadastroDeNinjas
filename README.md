@@ -32,18 +32,58 @@ exercitar:
 
 ## 📂 Estrutura do Projeto
 
-    CadastroDeNinjas
-    │
-    ├── src
-    │   ├── model
-    │   │   └── Ninja.java
-    │   │
-    │   ├── service
-    │   │   └── NinjaService.java
-    │   │
-    │   └── Main.java
-    │
-    └── README.md
+cadastrodeninjas
+│
+├── CadastroDeNinjasApplication.java
+│
+├── config
+│   ├── MapperConfig.java
+│   └── SwaggerConfig.java
+│
+├── ninja
+│   ├── controller
+│   │   └── NinjaController.java
+│   │
+│   ├── service
+│   │   └── NinjaService.java
+│   │
+│   ├── repository
+│   │   └── NinjaRepository.java
+│   │
+│   ├── dto
+│   │   └── NinjaDTO.java
+│   │
+│   ├── mapper
+│   │   └── NinjaMapper.java
+│   │
+│   └── model
+│       └── Ninja.java
+│
+├── missao
+│   ├── controller
+│   │   └── MissaoController.java
+│   │
+│   ├── service
+│   │   └── MissaoService.java
+│   │
+│   ├── repository
+│   │   │   └── MissaoRepository.java
+│   │
+│   ├── dto
+│   │   └── MissaoDTO.java
+│   │
+│   ├── mapper
+│   │   └── MissaoMapper.java
+│   │
+│   └── model
+│       └── Missao.java
+│
+├── exception
+│   ├── GlobalExceptionHandler.java
+│   └── ResourceNotFoundException.java
+│
+└── util
+    └── ApiResponse.java
 
 ------------------------------------------------------------------------
 
