@@ -1,5 +1,7 @@
 package dev.datanorte.CadastroDeNinjas.Ninjas;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,12 +18,15 @@ public class NinjaController {
     }
 
     @GetMapping("/boasVindas")
+    @Operation(summary = "Mensagem de Boas Vindas", description = "Essa rota da uma mensgem de boas vindas")
     public String boasVindas() {
         return "Boas vindas";
     }
     //Adicionar ninja (CREATE)
 
     @PostMapping("/criar")
+    @Operation(summary = "Cria um novo ninja essa rora", description = "Essa rota inclui um novo ninja")
+    @ApiResponses
     public ResponseEntity<String> criarNinja(@RequestBody NinjaDTO ninja) {
         NinjaDTO novoNinja = ninjaService.criarNinja(ninja);
         return ResponseEntity.status(HttpStatus.CREATED)
